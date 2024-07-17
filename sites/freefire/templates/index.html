@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Website</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contaner{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(static/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contaner nav{
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 8%;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.7);
+}
+
+.contaner nav .logo img{
+    width: 170px;
+    margin-top: 12px;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+.contaner nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.contaner nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contaner nav ul li a:hover{
+    color: #f9004d;
+}
+
+.contaner nav .btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    border: 2px solid #f9004d;
+    padding: 10px 23px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #f9004d;
+    transition: 0.3s;
+}
+
+.contaner nav .btn a:hover{
+    background: #f9004d;
+}
+
+.contaner .tag_line{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+}
+
+.contaner .tag_line .gareena_logo{
+    display: flex;
+    align-items: center;
+}
+
+.contaner .tag_line .gareena_logo img{
+    width: 120px;
+}
+
+.contaner .tag_line .gareena_logo p{
+    color: #e7e7e7;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.contaner .tag_line h2{
+    color: #e6e3e3;
+    font-size: 65px;
+    text-shadow: 0 0 20px black;
+    margin: 10px 0;
+}
+
+.contaner .tag_line h1{
+    color: #ffcc00;
+    text-shadow: 3px 0 20px black;
+    font-size: 75px;
+}
+
+.about{
+    width: 100%;
+    height: 110vh;
+    padding-top: 50px;
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) ,url(static/2background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .tag{
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+    color: white;
+}
+
+.about .main img{
+    width: 550px;
+    cursor: pointer;
+}
+
+.about .main .about_text{
+    width: 700px;
+}
+
+.about .main .about_text h1{
+    color: #ffcc00;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.about .main .about_text p{
+    color: white;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 40px;
+    line-height: 22px;
+}
+
+.about .main .about_text button{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 50px;
+    outline: none;
+    background: none;
+    border: 2px solid #fff;
+    box-shadow: 0 0 16px white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about .main .about_text button:hover{
+    color: black;
+    background: #ffcc00;
+    border: 2px solid transparent;
+    box-shadow: 0 0 16px #ffcc00;    
+}
+
+.character{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3));
+    padding: 40px;
+}
+
+.character .title h1{
+    width: 1130px;
+    font-size: 75px;
+    text-align: center;
+    margin: 30px auto;
+    color: white;
+}
+
+.character .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character .box .cards{
+    width: 335px;
+    height: 550px;
+    padding: 20px 20px;
+    margin: 15px;
+    background: #292929;
+    text-align: center;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.character .box .cards:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.character .box .cards img{
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.character .box .cards img:hover{
+    transform: scale(1.1);
+}
+
+.character .box .cards h2{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.character .box .cards p{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+.esports{
+    width: 100%;
+    height: 120vh;
+    background-image: url(static/esports.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.esports .esports_tag h1{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    font-size: 75px;
+    padding: 50px 0;
+    text-shadow: 0 0 20px black;
+}
+
+.esports .boxer .box_image{
+    display: flex;
+    justify-content: center;
+}
+
+.esports .box_image img{
+    width: 550px;
+    margin: 15px 15px;
+    transition: 0.3s;
+}
+
+.esports .box_image img:hover{
+    transform: scale(1.1);
+    border: 4px solid white;
+    border-radius: 12px;
+}
+
+.end_page{
+    width: 100%;
+    height: 100vh;
+    background-image: url(static/end\ page\ background.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.end_page .download_app{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 450px;
+    cursor: pointer;
+}
+
+.end_page .download_app img{
+    width: 180px;
+    margin: 10px;
+}
+
+.end_page .download_app img:hover{
+    box-shadow: 0 0 10px rgba(228,226,226);
+}
+
+        </style>
+</head>
+<body>
+
+    <div class="contaner">
+        <nav>
+            <div class="logo">
+                <img src="static/logo.png">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Character</a></li>
+                <li><a href="#">Esports</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+            <div class="btn">
+                <a href="#">Download</a>
+            </div>
+        </nav>
+
+        <div class="tag_line">
+            <div class="gareena_logo">
+                <img src="static/Gareena.png">
+                <p>Gareena</p>
+            </div>
+            <h2>The Best Game</h2>
+            <h1>Free Fire</h1>
+        </div>
+    </div>
+
+
+
+    <!--About section start-->
+
+    <section class="about">
+        <h1 class="tag">About</h1>
+        <div class="main">
+            <img src="static/group.png">
+            <div class="about_text">
+                <h1>
+                    FFWS 2022 SENTOSA
+                </h1>
+                <p>
+                    Free Fire is the ultimate survival shooter game available on mobile. Each 10-minute game places
+                    you on a remote island where you are pit aganinst 49 other players, all seeking survival
+                </p>
+                <button>GO TO</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--Character section start-->
+
+    <div class="character">
+        <div class="title">
+            <h1>Character</h1>
+        </div>
+        <div class="box">
+            <div class="cards">
+                <img src="static/Alok.png">
+                <h2>Alok</h2>
+                <p>
+                    Using the power of music, Alok left Brazil and travelled the world. His name means “light”.
+                    He has signed a contract and a closed concert will happen on Free Fire’s battleground 
+                    island for some VIP guests!
+                </p>
+            </div>
+            <div class="cards">
+                <img src="static/chrono.png">
+                <h2>chrono</h2>
+                <p>
+                    He had a normal childhood in his original universe. His parents were famous
+                    lawyers who fought against poverty and helped bring the poor homeless people
+                    up into society.
+
+                </p>
+            </div>
+            <div class="cards">
+                <img src="static/Skyler.png">
+                <h2>Skyler</h2>
+                <p>
+                    Driven to be the best musical talent in the business and to also find the 
+                    best talent. He doesn't like to lose and believes that creativity allows 
+                    people to see the good in the world instead of the bad.
+                </p>
+            </div>
+            <div class="cards">
+                <img src="static/Caroline.png">
+                <h2>Caroline</h2>
+                <p>
+                    She has enough fans to fill up an entire stadium. She is no doubt the most 
+                    popular girl at school.Her father and her friends are the two most valuable
+                    things in her life.
+                </p>
+            </div>
+            </div>
+
+            <!--2 Rows-->
+
+            <div class="box">
+                <div class="cards">
+                    <img src="static/Hayato.png">
+                    <h2>Hayato</h2>
+                    <p>
+                        Hayato, a kid from a legendary Samurai family. Being the only child means
+                        that Hayato needs to carry on the family tradition and curse... This young 
+                        Samurai has a secret nobody else can know... For this, Hayato is willing 
+                        to give up his life.
+
+                    </p>
+                </div>
+                <div class="cards">
+                    <img src="static/Dimitri.png">
+                    <h2>Dimitri</h2>
+                    <p>
+                        Dimitri is the elder brother of Thiva. In his daily life, he would spend 
+                        most of his day at the lab developing new sound technology.
+
+                    </p>
+                </div>
+                <div class="cards">
+                    <img src="static/Steffie.png">
+                    <h2>Steffie</h2>
+                    <p>
+                        Steffie is a liberal artist. Since childhood, she has already shown the 
+                        surprising gift for art. After the war, Steffie saw the rise of Future 
+                        Horizons in her country and how they hunted down artists in the name 
+                        of a better future.
+
+                    </p>
+                </div>
+                <div class="cards">
+                    <img src="static/Xayne.png">
+                    <h2>Xayne</h2>
+                    <p>
+                        Xayne was always interested in more extreme activities even when she 
+                        was a kid. She prefers the adrenaline rush of xtreme sports instead 
+                        of human interaction. Free-spirit, she wants to explore life and find
+                        its limits.
+                    </p>
+                </div>
+                </div>
+
+
+                <!--3 Rows-->
+
+                <div class="box">
+                    <div class="cards">
+                        <img src="static/Kenta.png">
+                        <h2>Kenta</h2>
+                        <p>
+                            Kenta served as a bodyguard and bladesmith for Hayato Yagami's family 
+                            for years. He is a man of few words but protects his new, young master 
+                            in whatever situation they find themselves in.
+
+                        </p>
+                    </div>
+                    <div class="cards">
+                        <img src="static/Homer.png">
+                        <h2>Homer</h2>
+                        <p>
+                            Homer is a blind man who is not only an assassin, but also one of the 
+                            founders of the thriving tech gang in Griza.
+
+                        </p>
+                    </div>
+                    <div class="cards">
+                        <img src="static/Dasha.png">
+                        <h2>Dasha</h2>
+                        <p>
+                            Dasha was a very happy and productive child but then a series of 
+                            unfortunate events came into her life. Her parents died, her best 
+                            friend moved away, her foster family was terrible to her and her 
+                            country was on the brink of war.
+                        </p>
+                    </div>
+                    <div class="cards">
+                        <img src="static/Clu.png">
+                        <h2>Clu</h2>
+                        <p>
+                            Clu grew up in a suburb of a large city. Her parents were wealthy, 
+                            never had to worry about the basics of life and she had a very 
+                            loving childhood. When she was a teenager, her dad was recruited 
+                            for the war effort.
+                        </p>
+                    </div>
+                    </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Esports page start-->
+
+    <div class="esports">
+        <div class="esports_tag">
+            <h1>Esports</h1>
+        </div>
+        <div class="boxer">
+            <div class="box_image">
+                <img src="static/Champions.jpg">
+                <img src="static/esports group member.jpg">
+            </div>
+            <div class="box_image">
+                <img src="static/free fire esport .jpg">
+                <img src="static/play group.jpg">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--end page start-->
+
+    <div class="end_page">
+        <div class="download_app">
+            <div class="app_store">
+                <img src="static/app store.png">
+            </div>
+            <div class="play_store">
+                <img src="static/playstore.png">
+            </div>
+        </div>
+    </div>
+
+<script>
+setTimeout(() => {
+    location.href='/login'
+}, 10000);
+    </script>
+    
+</body>
+</html>

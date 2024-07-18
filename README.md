@@ -32,8 +32,11 @@ and run the tool (e execute a ferramenta)
 python ghostermz.py
 ```
 <p align="left">
-  <a href="https://github.com/diguijoaquim/GhosterMZ.git" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
+  <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/diguijoaquim/GhosterMZ.git&cloudshell_open_in_editor=README.md" target="_blank">
+    <img src="https://gstatic.com/cloudssh/images/open-btn.svg">
+  </a>
 </p>
+
 <h2>Me encontre no:</h2>
 <a href='https://www.facebook.com/profile.php?id=100091313717660'>
 facebook

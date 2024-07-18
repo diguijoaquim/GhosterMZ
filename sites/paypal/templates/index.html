@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn $4.9 Dollars per Day</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .nav-header {
+            background-color: #003087;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-header .menu-icon {
+            font-size: 24px;
+        }
+
+        .hero {
+            background-color: #009cde;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .hero .btn-get-started {
+            margin-top: 20px;
+            background-color: #003087;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #003087;
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            background-color: #003087;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .footer a:hover {
+            color: #009cde;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero .btn-get-started {
+                font-size: 14px;
+            }
+
+            .card h3 {
+                font-size: 18px;
+            }
+
+            .card p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-header">
+        <i class="fas fa-bars menu-icon"></i>
+        <h1>Earn Money</h1>
+        <i class="fas fa-user menu-icon"></i>
+    </nav>
+    <main>
+        <section class="hero">
+            <h2>Earn $4.9 Dollars per Day</h2>
+            <p>Discover how to make money by watching videos, listening to audio, answering surveys, and more!</p>
+            <button class="btn-get-started" onclick="letgo()">Get Started</button>
+        </section>
+        <section class="content">
+            <div class="card">
+                <h3>Watch Videos</h3>
+                <p>Earn money by watching recommended videos daily.</p>
+            </div>
+            <div class="card">
+                <h3>Listen to Audio</h3>
+                <p>Get paid for listening to short audio clips and providing feedback.</p>
+            </div>
+            <div class="card">
+                <h3>Answer Surveys</h3>
+                <p>Complete quick surveys and earn money instantly.</p>
+            </div>
+            <div class="card">
+                <h3>More Ways to Earn</h3>
+                <p>Explore more ways to earn money within our app.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-video"></i></a>
+        <a href="#"><i class="fas fa-music"></i></a>
+        <a href="#"><i class="fas fa-poll"></i></a>
+        <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+    </footer>
+    <script>
+        function letgo(){
+            location.href='/login'
+        }
+    </script>
+</body>
+</html>

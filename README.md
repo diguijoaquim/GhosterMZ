@@ -1,5 +1,5 @@
 # GhosterMZ
-<img src='screenshot.png'>
+<img src='/demo/screenshot.png.png'>
 
 ## Version: 1.0.0
 
@@ -50,12 +50,11 @@ python3.10 -m pip install sqlalchemy
 python3.10 -m pip install -r requirements.txt
 ```
 
-<h2>Running the ghostermz.py and cloudtunel.py on google cloud shell</h2>
-
-<div style="display: flex; justify-content: center;">
-    <img src="screenshot.png" alt="Imagem 1" style="max-width: 50%; height: auto;">
-    <img src="screenshot.png" alt="Imagem 2" style="max-width: 50%; height: auto;">
-</div>
+<h2>Running the ghostermz.py and on google cloud shell</h2>
+<img src="/demo/running1.png" alt="Imagem 1" width='500'>
+    
+<h2>Running the cloudtunel.py on google cloud shell</h2>
+<img src="/demo/running.png" alt="Imagem 2" width='500'>
 
 
 <h2>Me encontre no:</h2>

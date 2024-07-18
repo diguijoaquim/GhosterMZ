@@ -1,5 +1,5 @@
 # GhosterMZ
-<img src='/demo/screenshot.png.png'>
+<img src='/demo/screenshot.png'>
 
 ## Version: 1.0.0
 

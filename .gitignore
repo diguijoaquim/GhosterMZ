@@ -1,19 +1,37 @@
-# Ignore virtual environments
-venv/
-
-# Ignore environment variables file
+# Arquivos de ambiente
 .env
 
-# Ignore compiled Python files
+# Arquivos de byte compilados Python
 *.pyc
-
-# Ignore logs and temporary files
-logs/
-*.log
-tmp/
-
-# Ignore package dependencies
+*.pyo
 __pycache__/
 
-# Ignore local configuration files
-instance/
+# Logs e arquivos de saída
+*.log
+*.pot
+*.out
+*.dump
+*.sql
+
+# Arquivos de configuração locais
+/.vscode
+/.idea
+
+# Arquivos de cache e dados temporários
+*.cache
+*.json
+*.sqlite3
+
+# Arquivos de dependências e ambiente virtual (se estiver usando venv ou similar)
+venv/
+env/
+
+# Arquivos de build e distribuição
+*.egg-info/
+dist/
+build/
+
+# Outros arquivos gerados automaticamente
+.coverage
+.pytest_cache/
+htmlcov/

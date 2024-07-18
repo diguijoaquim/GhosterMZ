@@ -16,9 +16,6 @@ db_path = os.path.join(current_dir, 'db', 'dados.db')
 engine = sqlalchemy.create_engine(f"sqlite:///{db_path}", echo=False)
 
 
-
-
-
 #Se o arquivo dados.db nao existir execute essa funcao
 def criatar_tabela():
     Base.metadata.create_all(engine)

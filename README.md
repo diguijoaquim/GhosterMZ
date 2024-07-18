@@ -1,4 +1,5 @@
 # GhosterMZ
+<img src='screenshot.png'>
 
 ## Version: 1.0.0
 

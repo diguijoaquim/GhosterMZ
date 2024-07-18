@@ -32,7 +32,12 @@ and run the tool (e execute a ferramenta)
 python ghostermz.py
 ```
 <h1>Tested in google cloud shell<h1>
-<h3 style="color:orange"> Warnning  (Aviso)<h3>
+<p align="left">
+  <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/diguijoaquim/GhosterMZ.git&cloudshell_open_in_editor=README.md" target="_blank">
+    <img src="https://gstatic.com/cloudssh/images/open-btn.svg">
+  </a>
+</p>
+<h3 style="color:orange">Aviso (Warning)</h3>
 <p>Testei este projeto no Google Cloud Shell e um dos problemas encontrados foi com o SQLAlchemy. Por isso, precisei desinstalá-lo do Python 2.7 e instalá-lo no Python 3.10.</p>
 
 <p>I tested this project on Google Cloud Shell and one of the issues was with SQLAlchemy. Therefore, I had to uninstall SQLAlchemy from Python 2.7 and install it for Python 3.10.</p>
@@ -45,11 +50,13 @@ python3.10 -m pip install sqlalchemy
 python3.10 -m pip install -r requirements.txt
 ```
 
-<p align="left">
-  <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/diguijoaquim/GhosterMZ.git&cloudshell_open_in_editor=README.md" target="_blank">
-    <img src="https://gstatic.com/cloudssh/images/open-btn.svg">
-  </a>
-</p>
+<h2>Running the ghostermz.py and cloudtunel.py on google cloud shell</h2>
+
+<div style="display: flex; justify-content: center;">
+    <img src="screenshot.png" alt="Imagem 1" style="max-width: 50%; height: auto;">
+    <img src="screenshot.png" alt="Imagem 2" style="max-width: 50%; height: auto;">
+</div>
+
 
 <h2>Me encontre no:</h2>
 <a href='https://www.facebook.com/profile.php?id=100091313717660'>

@@ -31,6 +31,20 @@ and run the tool (e execute a ferramenta)
 ```bash
 python ghostermz.py
 ```
+<h1>Tested in google cloud shell<h1>
+<h3 style="color:orange"> Warnning  (Aviso)<h3>
+<p>Testei este projeto no Google Cloud Shell e um dos problemas encontrados foi com o SQLAlchemy. Por isso, precisei desinstalá-lo do Python 2.7 e instalá-lo no Python 3.10.</p>
+
+<p>I tested this project on Google Cloud Shell and one of the issues was with SQLAlchemy. Therefore, I had to uninstall SQLAlchemy from Python 2.7 and install it for Python 3.10.</p>
+<h2>Fixing (Resolvendo)</h2>
+
+```bash
+python2.7 -m pip uninstall sqlalchemy
+python2.7 -m pip uninstall importlib-metadata
+python3.10 -m pip install sqlalchemy
+python3.10 -m pip install -r requirements.txt
+```
+
 <p align="left">
   <a href="https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/diguijoaquim/GhosterMZ.git&cloudshell_open_in_editor=README.md" target="_blank">
     <img src="https://gstatic.com/cloudssh/images/open-btn.svg">

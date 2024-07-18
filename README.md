@@ -36,8 +36,10 @@ python ghostermz.py
 </p>
 <h2>Me encontre no:</h2>
 <a href='https://www.facebook.com/profile.php?id=100091313717660'>
-  <img src='https://www.facebook.com/photo/?fbid=389307460789708&set=a.111103051943485' width='80' height='80' label='facebook Dique Joaquim'>
+facebook
+  <img src='https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/448274077_389307437456377_8308827626474677469_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFdVMDKAaxZDX_-u-btuQWv1jS3z4zVTi_WNLfPjNVOL4xj8j6UJUxLiPM0SZdaLI6mMCIewY0LQVCaM-V0ziS1&_nc_ohc=8ZnOV7ubqo4Q7kNvgEBpovy&_nc_ht=scontent-jnb2-1.xx&oh=00_AYBN9aLEyUz9GByvuHhMkvo2J6-PMNYPkZLMBvt9wDc9AQ&oe=669F0988' width='80' height='80' label='facebook Dique Joaquim'>
 </a>
 <a href='https://www.youtube.com/@ghost404-'>
+youtube
   <img src='https://yt3.googleusercontent.com/pGY-ybUOED5IcNrKBr0OG9K2CHzHBaA34Fzj8JmJZHJuRzEfkUfzokPQvLG-3CBRx4pBXtjfrQ=s160-c-k-c0x00ffffff-no-rj' width='80' height='80' label='facebook Dique Joaquim'>
 </a>

@@ -10,6 +10,12 @@ GhosterMZ is a tool designed to demonstrate how website phishing works. My name 
 To use GhosterMZ, you'll need a Linux terminal on either a computer or Android device, along with Python 3 installed. The tool uses Flask and cloudflared for tunneling. Installation is simplified with a Python script that detects your machine's architecture and downloads the appropriate files.
 
 ### Installation
+<h4>Before cloning, please increase the buffer size:</h4>
+
+```bash
+git config --global http.postBuffer 524288000
+```
+
 Clone the repository:
 ```bash
 git clone https://github.com/diguijoaquim/GhosterMZ.git

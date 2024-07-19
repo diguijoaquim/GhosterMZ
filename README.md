@@ -12,7 +12,7 @@ To use GhosterMZ, you'll need a Linux terminal on either a computer or Android d
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/GhosterMZ.git
+git clone https://github.com/diguijoaquim/GhosterMZ.git
 ```
 Open the Folder
 ```bash

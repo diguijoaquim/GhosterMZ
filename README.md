@@ -14,6 +14,9 @@ To use GhosterMZ, you'll need a Linux terminal on either a computer or Android d
 
 ```bash
 git config --global http.postBuffer 524288000
+git config --global http.lowSpeedLimit 0
+git config --global http.lowSpeedTime 999999
+
 ```
 
 Clone the repository:

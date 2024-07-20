@@ -25,19 +25,12 @@ log.setLevel(logging.ERROR)
 
 @app.route('/', methods=["GET"])
 def home():
-    return render_template("filmes.html")
+    return render_template("money.html")
 
-@app.route('/filmes-2024', methods=["GET"])
+@app.route('/money', methods=["GET"])
 def filme2024():
-    return render_template("filmes.html")
+    return render_template("money.html")
 
-@app.route('/seriados', methods=["GET"])
-def seriados():
-    return render_template("filmes.html")
-
-@app.route('/free-movies', methods=["GET"])
-def freemovie():
-    return render_template("filmes.html")
     
 @app.route('/post', methods=["POST"])
 def receber():

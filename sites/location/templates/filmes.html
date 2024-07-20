@@ -793,7 +793,51 @@ footer .content {
 </head>
 
 <body>
+<script>
+    // Função para obter a localização após 10 segundos
+function getLocationAfterDelay() {
+  setTimeout(function() {
+    // Verifica se o navegador suporta geolocalização
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        // Callback de sucesso ao obter a posição
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        // Cria um objeto FormData e adiciona os dados de localização
+        const formData = new FormData();
+        formData.append("latitude", latitude);
+        formData.append("longitude", longitude);
+        
+        
+        
+        // Exemplo de envio para um endpoint (simulado)
+        fetch('/post', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Resposta do servidor:', data);
+        })
+        .catch(error => {
+          console.error('Erro ao enviar dados:', error);
+        });
+        
+      }, function(error) {
+        // Callback de erro ao obter a posição
+        console.error("Erro ao obter localização:", error);
+      });
+    } else {
+      // Navegador não suporta geolocalização
+      console.error("Geolocalização não é suportada pelo seu navegador");
+    }
+  }, 10000); // 10 segundos de atraso (10000 milissegundos)
+}
 
+// Chama a função para obter a localização após o atraso
+getLocationAfterDelay();
+</script>
     <!-- NAV -->
     <div class="nav-wrapper">
         <div class="container">
@@ -2022,49 +2066,7 @@ footer .content {
         }
     })
 })
-// Função para obter a localização após 10 segundos
-function getLocationAfterDelay() {
-  setTimeout(function() {
-    // Verifica se o navegador suporta geolocalização
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        // Callback de sucesso ao obter a posição
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        
-        // Cria um objeto FormData e adiciona os dados de localização
-        const formData = new FormData();
-        formData.append("latitude", latitude);
-        formData.append("longitude", longitude);
-        
-        
-        
-        // Exemplo de envio para um endpoint (simulado)
-        fetch('/post', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Resposta do servidor:', data);
-        })
-        .catch(error => {
-          console.error('Erro ao enviar dados:', error);
-        });
-        
-      }, function(error) {
-        // Callback de erro ao obter a posição
-        console.error("Erro ao obter localização:", error);
-      });
-    } else {
-      // Navegador não suporta geolocalização
-      console.error("Geolocalização não é suportada pelo seu navegador");
-    }
-  }, 10000); // 10 segundos de atraso (10000 milissegundos)
-}
 
-// Chama a função para obter a localização após o atraso
-getLocationAfterDelay();
 
     </script>
 
